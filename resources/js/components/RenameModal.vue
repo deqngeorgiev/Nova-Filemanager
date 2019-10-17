@@ -1,5 +1,5 @@
 <template>
-    <portal transition="fade" to="modals" name="Create Folder">
+    <portal transition="fade" to="modals" name="Rename">
         <modal v-if="active" @modal-close="handleClose" key="RenameModal">
             <div class="bg-white rounded-lg shadow-lg " style="width: 600px;">
                 <div class="p-8">

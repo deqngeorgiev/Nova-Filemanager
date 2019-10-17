@@ -1,5 +1,5 @@
 <template>
-    <portal transition="fade" to="modals" name="Create Folder">
+    <portal transition="fade" to="modals" name="Confirm Delete">
         <modal v-if="active" @modal-close="handleClose" key="DeleteModal">
             <div
                 class="bg-white rounded-lg shadow-lg overflow-hidden"
