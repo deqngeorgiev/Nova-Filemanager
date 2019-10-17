@@ -1,5 +1,5 @@
 <template>
-    <modal @modal-close="handleClose">
+    <modal @modal-close="handleClose" key="RemoveModal">
         <div
             class="bg-white rounded-lg shadow-lg overflow-hidden"
             style="width: 460px"

@@ -45,7 +45,6 @@
             >
             </DetailPopup>
 
-
             <create-folder ref="createFolderModal" :active="showCreateFolder" :current="currentPath" v-on:closeCreateFolderModal="closeModalCreateFolder" v-on:refresh="refreshCurrent" />
 
             <UploadProgress ref="uploader" :current="currentPath" :visibility="field.visibility" v-on:removeFile="removeFileFromUpload"></UploadProgress>
@@ -62,14 +61,13 @@
             </p>
 
 
-            <portal to="modals">
-                <transition name="fade">
-                    <confirm-modal-remove-file
-                        v-if="removeModalOpen"
-                        @confirm="removeFile"
-                        @close="closeRemoveModal"
-                    />
-                </transition>
+            <portal transition="fade" to="modals">
+                <confirm-modal-remove-file
+                    key="confirmModalRemove"
+                    v-if="removeModalOpen"
+                    @confirm="removeFile"
+                    @close="closeRemoveModal"
+                />
             </portal>
 
             <p v-if="hasError" class="my-2 text-danger">
